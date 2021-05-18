@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do-App</title>
+       <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+
+  <body>
+    <div id="app" class="container">
+    <h2>Todo</h2>
+    <ul class="list-unstyled">
+    <li v-for="todo in todos">
+    <label>
+    <input type="checkbox" v-model="todo.done" />
+    <span v-bind:class="{'done': todo.done}">{{todo.text}}</span>
+    </label>
+    </li>
+    </ul>
+    <p>
+        <input type="text" v-model="todoText" placeholder="add new todo here" />
+                <input type="date" v-model="todoText" placeholder="add new date here" />
+
+        <button v-on:click="addTodo()" class="btn btn-primary btn-sm">Submit</button>
+	</p>
+</div>
+      <form id="To-Do-List" @submit.prevent="getInputValueTask">
+              <br>
+              <button onclick="Delete Tasks()">Clear All</button>
+              <div>
+              <p>Your tasks are:</p>
+                  <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
+                  <p id="strikeInstruction">Check for strikethrough:</p>
+                  <div contenteditable="true">
+              <ol id="my_span1">
+                  <input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);>
+                      </ol>
+                  </div>
+          </div>
+      </form>
+    <script src="https://unpkg.com/vue"></script>
+      <script src="js/script.js"></script>
+  </body>
+</html>

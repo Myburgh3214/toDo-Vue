@@ -1,0 +1,35 @@
+body{
+    background: white url("../images/memory.jpg");
+    color: greenyellow;
+} 
+li {
+    contain: content;
+}
+@media (max-width:600px) {
+    body{
+    background: white url("../images/memory.jpg");
+    color: greenyellow;
+}
+    li {
+    contain: content;
+}
+} 
+    @media (max-width:768px) and (min-width:600px) {
+        body{
+        background: white url("../images/memory.jpg");
+        color: greenyellow;
+}
+    li {
+    contain: content;
+}
+
+}
+    @media (max-width:1024px) and (min-width:768px) {
+        body{
+        background: white url("../images/memory.jpg");
+        color: greenyellow;
+}
+    li {
+    contain: content;
+}
+        
