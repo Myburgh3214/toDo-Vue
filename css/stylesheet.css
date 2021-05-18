@@ -5,10 +5,18 @@ body{
 li {
     contain: content;
 }
+    .done {
+        text-decoration: line-through;
+        color: yellowgreen;
+}
 @media (max-width:600px) {
     body{
     background: white url("../images/memory.jpg");
     color: greenyellow;
+}
+    .done {
+        text-decoration: line-through;
+        color: yellowgreen;
 }
     li {
     contain: content;
@@ -22,14 +30,32 @@ li {
     li {
     contain: content;
 }
+        .done {
+            text-decoration: line-through;
+            color: yellowgreen;
+}
 
 }
     @media (max-width:1024px) and (min-width:768px) {
         body{
         background: white url("../images/memory.jpg");
-        color: greenyellow;
+        color: yellowgreen;
 }
     li {
     contain: content;
 }
-        
+        input#packers {
+    text-decoration: line-through;
+}
+    .done {
+        text-decoration: line-through;
+        color: grey;
+}
+        .done {
+	text-decoration: line-through;
+	color: red;
+}
+        .done {
+	text-decoration: line-through;
+	color: grey;
+}
