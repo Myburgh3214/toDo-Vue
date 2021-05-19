@@ -1,6 +1,8 @@
 body{
     background: white url("../images/memory.jpg");
     color: greenyellow;
+    background-size: cover;
+    background-attachment: fixed;
 } 
 li {
     contain: content;
@@ -13,6 +15,8 @@ li {
     body{
     background: white url("../images/memory.jpg");
     color: greenyellow;
+    background-size: cover;
+    background-attachment: fixed;
 }
     .done {
         text-decoration: line-through;
@@ -38,8 +42,10 @@ li {
 }
     @media (max-width:1024px) and (min-width:768px) {
         body{
-        background: white url("../images/memory.jpg");
-        color: yellowgreen;
+            background: white url("../images/memory.jpg");
+            color: yellowgreen;
+            background-size: cover;
+            background-attachment: fixed;
 }
     li {
     contain: content;
