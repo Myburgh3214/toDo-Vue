@@ -14,6 +14,29 @@ var app = new Vue({
 				{text: newTodo, done: false}
 			);
 			this.todoText = '';
-		}
-	}
-});
+		},
+       del (todos) {
+      // this.arr.splice(index, 1)
+      this.$delete(this.todos, todo)
+    }
+        
+    }
+	})
+
+
+/////localstorage JSON
+function getInputValueTask(){
+            // Selecting the input element and get its value 
+           let listVal = document.getElementById("Task").value;
+            // Displaying the value
+           console.log(listVal);   
+
+
+let obj = document.getElementById("Task").value;
+
+let myData = JSON.stringify(obj);
+localStorage.setItem("userData", myData);
+
+myText = localStorage.getItem("userData");
+newObj = JSON.parse(myText);
+}
