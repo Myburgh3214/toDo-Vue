@@ -8,23 +8,26 @@
   <body>
     <div id="app" class="container">
     <h2>Todo</h2>
+        <form>
     
         <p>
         <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit">
-        <button onclick="getInputValueTask()" v-on:click="addTodo()" class="btn btn-primary btn-sm">Submit</button>
-        <button @click="del(index)">X</button>
+        <button type="button" onclick="getInputValueTask()" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
             <button onclick="getInputValueTask()">Save</button>
 
         </p>
 
         <ul class="list-unstyled">
         <li   v-for="todo in todos">
+        <button @click="del(index)">X</button>
         <label>
         <input type="checkbox"  v-model="todo.done" />
         <span  v-bind:class="{'done': todo.done}">{{todo.text}}</span>
         </label>
         </li>
         </ul>
+                    </form>
+
     </div>
     <script src="https://unpkg.com/vue"></script>
       <script src="js/script.js"></script>
