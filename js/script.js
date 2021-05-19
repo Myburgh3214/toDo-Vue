@@ -19,7 +19,8 @@ var app = new Vue({
       // this.arr.splice(index, 1)
       this.$delete(this.todos, todos)
     },
-        
+     sortObject: function(o) {
+    return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});    
         
     }
 	})
