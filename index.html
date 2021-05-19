@@ -7,19 +7,23 @@
 
   <body>
     <div id="app" class="container">
-    <h2>Todo</h2>
+    <h1>My tasks for the day</h1>
         <form>
     
         <p>
         <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit">
         <button type="button" onclick="getInputValueTask()" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
         <button @click="del(index)">Clear All</button>
+
         </p>
-        <ul class="list-unstyled">
+        <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
+            <h2>Your Tasks are:</h2>
+        <ul id="my_span1" class="list-unstyled">
         <li   v-for="todo in todos">
         <label>
         <input type="checkbox"  v-model="todo.done" />
-        <span  v-bind:class="{'done': todo.done}" contenteditable="true"  >{{todo.text}}</span>
+
+        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true"  >{{todo.text}}</span>
         </label>
         </li>
         </ul>
