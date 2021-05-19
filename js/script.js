@@ -17,7 +17,7 @@ var app = new Vue({
 		},
        del (todos) {
       // this.arr.splice(index, 1)
-      this.$delete(this.todos, todo)
+      this.$delete(this.todos, todos)
     }
         
     }
