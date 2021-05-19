@@ -20,7 +20,7 @@
         <li   v-for="todo in todos">
         <label>
         <input type="checkbox"  v-model="todo.done" />
-        <span  v-bind:class="{'done': todo.done}">{{todo.text}}</span>
+        <span  v-bind:class="{'done': todo.done}" contenteditable="true"  >{{todo.text}}</span>
         </label>
         </li>
         </ul>
