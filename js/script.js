@@ -1,4 +1,4 @@
-var app = new Vue({
+let app = new Vue({
 	el: '#app',
 	data: {
 		todoText: '',
@@ -18,12 +18,12 @@ var app = new Vue({
        del (todos) {
       // this.arr.splice(index, 1)
       this.$delete(this.todos, todos)
-    }   
+    } 
     }
 	})
 function sortAbc() {
     // Declaring Variables
-            var geek_list, i, run, li, stop;
+            let geek_list, i, run, li, stop;
   
             // Taking content of list as input
             geek_list = document.getElementById("my_span1");

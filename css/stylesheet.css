@@ -9,18 +9,18 @@ li {
 }
     .done {
         text-decoration: line-through;
-        color: yellowgreen;
+        color: #0300A4;
 }
 @media (max-width:600px) {
     body{
     background: white url("../images/ocean.jpg");
-    color: greenyellow;
+    color: #0300A4;
     background-size: cover;
     background-attachment: fixed;
 }
     .done {
         text-decoration: line-through;
-        color: yellowgreen;
+        color: #0300A4;
 }
     li {
     contain: content;
@@ -29,21 +29,20 @@ li {
     @media (max-width:768px) and (min-width:600px) {
         body{
         background: white url("../images/ocean.jpg");
-        color: greenyellow;
+        color: #0300A4;
 }
     li {
     contain: content;
 }
         .done {
             text-decoration: line-through;
-            color: yellowgreen;
+            color: #0300A4;
 }
-
 }
     @media (max-width:1024px) and (min-width:768px) {
         body{
             background: white url("../images/ocean.jpg");
-            color: yellowgreen;
+            color: #0300A4;
             background-size: cover;
             background-attachment: fixed;
 }
@@ -53,15 +52,7 @@ li {
         input#packers {
     text-decoration: line-through;
 }
-    .done {
-        text-decoration: line-through;
-        color: grey;
-}
         .done {
 	text-decoration: line-through;
-	color: red;
-}
-        .done {
-	text-decoration: line-through;
-	color: grey;
+	color: #0300A4;
 }
