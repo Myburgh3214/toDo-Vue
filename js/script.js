@@ -1,7 +1,10 @@
 var app = new Vue({
 	el: '#app',
 	data: {
+        
 		todoText: '',
+            weekday: new Date().toString().slice(0, 3),
+
 		todos: [{
             id: 0, title: "todoList", completed: "false"
         },
@@ -15,11 +18,15 @@ var app = new Vue({
 	methods: {
 		addTodo: function() {
 			let newTodo = this.todoText.trim();
-			if (!newTodo) {return;}
-			this.todos.push(
-				{text: newTodo, done: false}
+                 if (this.todoText !== '') {
+        this.todos.push({
+          text: this.todoText,
+          wDay: this.weekday,
+          done: false
+        }
 			);
-			this.todoText = '';
+			this.todoText = ''
+                 }
 		},
        del (todo) {
       this.$delete(this.todoText, todos)

@@ -17,13 +17,22 @@
         <select v-model="selectedPriority" class="priority">
       <option v-for="prio in priorities" :value="prio">{{ prio.label }}</option>
     </select>
+            <select v-model="weekday">
+          <option value="Mon">Monday</option>
+          <option value="Tue">Tuesday</option>
+          <option value="Wed">Wednesday</option>
+          <option value="Thu">Thursday</option>
+          <option value="Fri">Friday</option>
+          <option value="Sat">Saturday</option>
+          <option value="Sun">Sunday</option>
+        </select>
         </p>
             <h2>Your Tasks are:</h2>
         <ul id="my_span1" class="list-unstyled">
         <li v-for="todo in todos">
         <label>
         <input type="checkbox"  v-model="todo.done" />
-        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}}
+        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}} {{todo.wDay}}
             </span>       
         </label>
         </li>
