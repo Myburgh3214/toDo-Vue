@@ -12,22 +12,23 @@
     
         <p>
         <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit">
-        <button type="button" onclick="getInputValueTask()" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
-        <button @click="del(index)">Clear All</button>
+        <button type="button" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
+        <button @click="del(index)">Delete List</button>
+        <select v-model="selectedPriority" class="priority">
+      <option v-for="prio in priorities" :value="prio">{{ prio.label }}</option>
+    </select>
         </p>
-        <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
             <h2>Your Tasks are:</h2>
         <ul id="my_span1" class="list-unstyled">
-        <li   v-for="todo in todos">
+        <li v-for="todo in todos">
         <label>
         <input type="checkbox"  v-model="todo.done" />
-
-        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true"  >{{todo.text}}</span>
+        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}}
+            </span>       
         </label>
         </li>
         </ul>
         </form>
-
     </div>
     <script src="https://unpkg.com/vue"></script>
       <script src="js/script.js"></script>
