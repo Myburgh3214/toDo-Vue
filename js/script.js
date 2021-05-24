@@ -22,14 +22,15 @@ var app = new Vue({
         this.todos.push({
           text: this.todoText,
           wDay: this.weekday,
+        priority: this.selectedPriority,
           done: false
         }
 			);
 			this.todoText = ''
                  }
 		},
-       del (todo) {
-      this.$delete(this.todoText, todos)
+        removeItem(todo) {
+      this.todos.splice(todo, 1)
     },
         taskClasses(task) {
       const classes = {

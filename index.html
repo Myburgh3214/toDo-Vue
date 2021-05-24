@@ -13,7 +13,6 @@
         <p>
         <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit">
         <button type="button" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
-        <button @click="del(index)">Delete List</button>
         <select v-model="selectedPriority" class="priority">
       <option v-for="prio in priorities" :value="prio">{{ prio.label }}</option>
     </select>
@@ -31,11 +30,16 @@
         <ul id="my_span1" class="list-unstyled">
         <li v-for="todo in todos">
         <label>
+        <button @click="removeItem(todo)">X</button>
         <input type="checkbox"  v-model="todo.done" />
-        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}} {{todo.wDay}}
+        <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}} {{todo.wDay}}{{todo.selectedPriority}}
             </span>       
         </label>
-        </li>
+             <div class="item-option">
+          <i class="item-done fa fa-check-circle" @click="toggleDone(index)"></i>
+          <i class="item-remove fa fa-times-circle" @click="removeItem(index)"></i>
+            </div>          
+            </li>
         </ul>
         </form>
     </div>
