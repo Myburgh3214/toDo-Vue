@@ -4,15 +4,12 @@ var app = new Vue({
         
 		todoText: '',
             weekday: new Date().toString().slice(0, 3),
-
 		todos: [{
             id: 0, title: "todoList", completed: "false"
-        },
-            
-			
+        },	
 		],
-        priorities: [{prio: 2, label: 'low'}, {prio: 1, label: 'medium'}, {prio: 0, label: 'high'}],
-      selectedPriority: {prio: 2, label: 'low'},
+    priorities: [{prio: 2, label: 'low'}, {prio: 1, label: 'medium'}, {prio: 0, label: 'high'}],
+      selectedPriority: {priority: 2, label: 'low'},
 
                   },
 	methods: {
@@ -22,7 +19,7 @@ var app = new Vue({
         this.todos.push({
           text: this.todoText,
           wDay: this.weekday,
-        priority: this.selectedPriority,
+        priority: this.selectedPriority.label,
           done: false
         }
 			);
