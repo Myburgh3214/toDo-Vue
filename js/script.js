@@ -13,7 +13,7 @@ let app = new Vue({
                   },
 	methods: {
         saveTask : function(){
-            const data = JSON.stringify(this.todos)///works
+            const data = JSON.stringify(this.todos)///test
         window.localStorage.setItem('todos', data);
         console.log(JSON.parse(window.localStorage.getItem('todos')))
 
