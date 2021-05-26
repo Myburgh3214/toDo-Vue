@@ -10,13 +10,14 @@
     <h1>My tasks for the day</h1>
         <form>
     
-        <p>
+        
         <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit" required>
-        <button type="button" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
+        <h2>Select Priority: </h2>
         <select v-model="selectedPriority" class="priority">
       <option v-for="prio in priorities" :value="prio">{{ prio.label }}</option>
     </select>
-            <select v-model="weekday">
+            <h2>Select due date:</h2>
+    <select v-model="weekday">
           <option value="Mon">Monday</option>
           <option value="Tue">Tuesday</option>
           <option value="Wed">Wednesday</option>
@@ -25,7 +26,9 @@
           <option value="Sat">Saturday</option>
           <option value="Sun">Sunday</option>
         </select>
-        </p>
+    <div class="submit">
+    <button type="button" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
+    </div>
             <h2>Your Tasks are:</h2>
         <ul id="my_span1" class="list-unstyled">
         <li v-for="todo in todos">

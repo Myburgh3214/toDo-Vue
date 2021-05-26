@@ -11,6 +11,9 @@ li {
         text-decoration: line-through;
         color: #0300A4;
 }
+.submit {
+    margin-top: 25px;
+}
 @media (max-width:600px) {
     body{
     background: white url("../images/ocean.jpg");
@@ -25,6 +28,9 @@ li {
     li {
     contain: content;
 }
+    .submit {
+    margin-top: 25px;
+
 } 
     @media (max-width:768px) and (min-width:600px) {
         body{
@@ -38,6 +44,9 @@ li {
             text-decoration: line-through;
             color: #0300A4;
 }
+        .submit {
+    margin-top: 25px;
+
 }
     @media (max-width:1024px) and (min-width:768px) {
         body{
@@ -55,4 +64,7 @@ li {
         .done {
 	text-decoration: line-through;
 	color: #0300A4;
+}
+        .submit {
+    margin-top: 25px;
 }
