@@ -29,6 +29,9 @@
     <div class="submit">
     <button type="button" v-on:click="addTodo()"  class="btn btn-primary btn-sm">Submit</button>
     </div>
+    <div class="submit">
+        <button type="button" @click="saveTask()"  class="btn btn-primary btn-sm">Save</button>
+    </div>
             <h2>Your Tasks are:</h2>
         <ul id="my_span1" class="list-unstyled">
         <li v-for="todo in todos">
@@ -41,7 +44,7 @@
             </li>
         </ul>
         </form>
-    </div>
+    </div> 
     <script src="https://unpkg.com/vue"></script>
       <script src="js/script.js"></script>
   </body>

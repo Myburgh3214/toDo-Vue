@@ -5,7 +5,6 @@ var app = new Vue({
 		todoText: '',
             weekday: new Date().toString().slice(0, 3),
 		todos: [{
-            id: 0, title: "todoList", completed: "false"
         },	
 		],
     priorities: [{prio: 2, label: 'priority: low'}, {prio: 1, label: 'priority: medium'}, {prio: 0, label: 'priority: high'}],
@@ -13,6 +12,10 @@ var app = new Vue({
 
                   },
 	methods: {
+        saveTask : function(){
+            this.todos.push(this.todo.done);
+
+        },
 		addTodo: function() {
 			let newTodo = this.todoText.trim();
                  if (this.todoText !== '') {
