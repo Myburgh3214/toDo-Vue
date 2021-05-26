@@ -1,4 +1,4 @@
-var app = new Vue({
+let app = new Vue({
 	el: '#app',
 	data: {
         
@@ -13,7 +13,9 @@ var app = new Vue({
                   },
 	methods: {
         saveTask : function(){
-            this.todos.push(this.todo.done);
+            const data = JSON.stringify(this.todos)
+        window.localStorage.setItem('todos', data);
+        console.log(JSON.parse(window.localStorage.getItem('todos')))
 
         },
 		addTodo: function() {
