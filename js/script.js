@@ -8,7 +8,7 @@ var app = new Vue({
             id: 0, title: "todoList", completed: "false"
         },	
 		],
-    priorities: [{prio: 2, label: 'low'}, {prio: 1, label: 'medium'}, {prio: 0, label: 'high'}],
+    priorities: [{prio: 2, label: 'priority: low'}, {prio: 1, label: 'priority: medium'}, {prio: 0, label: 'priority: high'}],
       selectedPriority: {priority: 2, label: 'low'},
 
                   },
