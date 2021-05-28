@@ -8,7 +8,6 @@ data: {
     selectedPriority: {priority: 2, label: 'low'},
 
 },
-
 methods: {
     saveTask : function(){
     const data = JSON.stringify(this.todos)
