@@ -7,11 +7,9 @@
 
   <body>
     <div id="app" class="container">
-    <h1>My tasks for the day</h1>
+    <h1>My Tasks For The Day</h1>
         <form>
-    
-        
-        <input type="text" id="Task" name="Task"  v-model="todoText" placeholder="add new task here" show="todoText.edit" required>
+        <input type="text" id="Task" name="Task" v-on:keyup.enter ="addTodo" v-model="todoText" placeholder="add new task here" show="todoText.edit" required>
         <h2>Select Priority: </h2>
         <select v-model="selectedPriority" class="priority">
       <option v-for="prio in priorities" :value="prio">{{ prio.label }}</option>
@@ -33,20 +31,20 @@
     <div class="submit">
         <button type="button" @click="saveTask()"  class="btn btn-primary btn-sm">Save</button>
     </div>
-            <h2>Your Tasks are:</h2>
+        <h2>Your Tasks Are:</h2>
         <ul id="my_span1" class="list-unstyled">
         <li v-for="todo in todos">
         <label>
         <button v-on:click="removeItem(todo)">X</button>
         <input type="checkbox"  v-model="todo.done" />
         <span id="my_span1"  v-bind:class="{'done': todo.done}" contenteditable="true" >{{todo.text}} {{todo.wDay}} {{todo.priority}}
-            </span>       
+        </span>       
         </label>  
-            </li>
+        </li>
         </ul>
         </form>
     </div> 
     <script src="https://unpkg.com/vue"></script>
-      <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
