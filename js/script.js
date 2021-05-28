@@ -23,6 +23,7 @@ addTodo: function() {
     wDay: this.weekday,
     priority: this.selectedPriority.label,
     done: false
+        //// used to push into list.
 });
     this.todoText = ''
 }
