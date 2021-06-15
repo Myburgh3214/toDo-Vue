@@ -8,6 +8,11 @@ data: {
     selectedPriority: {priority: 2, label: 'low'},
 
 },
+    mounted() {
+        if (localStorage.todos) {
+            this.todos = JSON.parse(localStorage.getItem("todos"))
+}
+},
 methods: {
     saveTask : function(){
     const data = JSON.stringify(this.todos)
