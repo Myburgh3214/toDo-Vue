@@ -8,18 +8,24 @@ data: {
     selectedPriority: {priority: 2, label: 'low'},
 
 },
-    mounted() {
-        if (localStorage.todos) {
-            this.todos = JSON.parse(localStorage.getItem("todos"))
-}
+mounted() {
+    if (localStorage.todos) {
+        this.todos = JSON.parse(localStorage.getItem("todos"))
+}   
 },
-methods: {
-    saveTask : function(){
+methods: {              
+    sort: function() {
+            this.todos.sort((a, b) => (a.todos > b.todos ? 1 : -1));
+},
+sortPriority: function() {
+    this.todos.sort((a, b) => (a.priority > b.priority ? 1 : -1));
+},
+saveTask : function(){
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data);
     JSON.parse(localStorage.getItem("todos"))          
 },
-addTodo: function() {
+addTodo : function() {
     let newTodo = this.todoText.trim();
     if (this.todoText !== '') {
     this.todos.push({
@@ -32,6 +38,7 @@ addTodo: function() {
     this.todoText = ''
 }
 },
+
 removeItem(todo) {
     this.todos.splice(todo, 1)
 },
